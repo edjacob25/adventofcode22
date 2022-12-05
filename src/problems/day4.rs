@@ -1,9 +1,8 @@
 use super::common::read_file;
-use std::collections::HashSet;
 
 fn convert_into_pairs(line: &str) -> Vec<(u32, u32)> {
     let mut pairs = Vec::new();
-    for (i, p) in line.split(",").enumerate() {
+    for p in line.split(",") {
         let mut sp = p.split("-");
         let initial = sp.next().unwrap().parse::<u32>().unwrap();
         let fina = sp.next().unwrap().parse::<u32>().unwrap();

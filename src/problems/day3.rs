@@ -9,7 +9,7 @@ pub fn part1() -> u32 {
             let second = &l[l.len() / 2..];
             for c in second.chars() {
                 if first.contains(c) {
-                   return if ('a'..='z').contains(&c) {
+                    return if ('a'..='z').contains(&c) {
                         (c as u32) - 96
                     } else {
                         (c as u32) - 38
@@ -40,7 +40,8 @@ pub fn part2() -> u32 {
                     } else {
                         (c as u32) - 38
                     }
-                }).unwrap()
+                })
+                .unwrap()
         })
         .sum()
 }
